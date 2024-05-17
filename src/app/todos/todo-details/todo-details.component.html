@@ -1,0 +1,7 @@
+@if (vm(); as vm) {
+  @if (vm.isLoading) {
+    <h1>Loading...</h1>
+  } @else {
+    <pre>{{ vm.todo | json }}</pre>
+  }
+}

@@ -1,0 +1,22 @@
+@if (vm(); as vm) {
+  @if (vm.error) {
+    <h1>Error...</h1>
+  } @else if (vm.isLoading) {
+    <h1>Loading...</h1>
+  } @else {
+    <div class="container mx-auto py-6">
+      <button
+        class="mb-6 rounded-md bg-blue-600 p-2 text-white"
+        (click)="addTodo()"
+      >
+        Add Todo
+      </button>
+
+      <ul>
+        @for (todo of vm.todos; track todo.id) {
+          <li>{{ todo.title }}</li>
+        }
+      </ul>
+    </div>
+  }
+}

@@ -1,0 +1,13 @@
+<section class="bg-white p-10">
+  <ng-container [formGroup]="todoForm">
+    <input
+      type="text"
+      class="min-w-[120px] border border-gray-500 p-4"
+      formControlName="title"
+    />
+
+    <button class="bg-green-600 p-3 text-white" (click)="submit()">
+      Submit
+    </button>
+  </ng-container>
+</section>
